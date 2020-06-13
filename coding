@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<body bgcolor="berry">
+<title>Halo Kania ^_^I</title>
+<script type="text/javascript">
+ window.onload = function() { jam(); }
+
+ function jam() {
+  var e = document.getElementById('jam'),
+  d = new Date(), h, m, s;
+  h = d.getHours();
+  m = set(d.getMinutes());
+  s = set(d.getSeconds());
+
+  e.innerHTML = h +':'+ m +':'+ s;
+
+  setTimeout('jam()', 1000);
+ }
+
+ function set(e) {
+  e = e < 10 ? '0'+ e : e;
+  return e;
+ }
+</script>
+</head>
+<body>
+<center>
+<h1 style="font-size: 75px; font-family: verdana;" id="jam"></h1>
+<script>	
+//UCAPAN
+var Digital=new Date()
+var hours=Digital.getHours()
+
+//Pergantian waktu
+if (hours>=5&&hours<=11) //pesan pagi hari (05.00-11.00)
+document.write('<center><b>Selamat Pagi Sayang</b>')
+else if (hours==12) //pesan siang hari (12.00-13.00)
+document.write('<center<b>Selamat Siang Sayang</b>')
+else if (hours>=13&&hours<=18) //pesan sore hari(14.00-18.00)
+document.write('<center><b>Selamat Sore Sayang</b>')
+else if (hours>=19&&hours<=23) //pesan malam hari (19.00-23.00)
+document.write('<center><b>Selamat Malam Sayang</b>')
+else //pesan malam mejelang pagi(00.00-04.00)
+document.write('<center><b>Jangan Lupa Tidur ^_^</b>')
+</script>
+</center>
+</body>
+</html>
